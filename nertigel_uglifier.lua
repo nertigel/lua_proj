@@ -1,4 +1,6 @@
 --[[
+    Credits to watermalone cause I got a small part of this code from 1 of his projects <3
+    usage:
     lua nertigel_uglifier.lua file_name.lua output_name.lua
 ]]
 
