@@ -74,4 +74,5 @@ for key, value in pairs(v4) do
     local b1 = v0..key.."_"
     print(b1.."ID "..value["ID"])
     print(b1.."Cost "..value["Cost"])
+    --print(b1.."Cost "..math.floor(tonumber(value["Cost"]) * 0.5)) -- what I use to reduce price by half for traders
 end
