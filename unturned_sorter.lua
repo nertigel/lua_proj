@@ -1,5 +1,5 @@
 --[[
-    the code shouldn't really matter you since it's ghetto anyways(my style + haven't coded in a while)
+    the code shouldn't really matter since it's ghetto anyways(my style + haven't coded in a while)
     currently only picks `Buying` with its' `ID` and `Cost`
     place your data at `v1` right below(old data is just an example I used)
     broken data provided @ v1 will cause an error
