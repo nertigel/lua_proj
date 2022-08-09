@@ -70,6 +70,7 @@ for key, value in pairs(v3) do
         ai = ai + 1
     end
 end
+print("Buying "..#v4+1)
 for key, value in pairs(v4) do 
     local b1 = v0..key.."_"
     print(b1.."ID "..value["ID"])
