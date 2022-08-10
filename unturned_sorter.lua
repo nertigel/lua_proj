@@ -4,6 +4,7 @@
     place your data at `v1` right below(old data is just an example I used)
     broken data provided @ v1 will cause an error
 ]]
+local u9 = false -- set to `true` if you want the items to only appear if they have it(Conditions pretty much)
 local v0 = "Buying_" -- in case u want to use `Selling_`
 local v1 = [[
 Buying_0_ID 37544
@@ -76,4 +77,10 @@ for key, value in pairs(v4) do
     print(b1.."ID "..value["ID"])
     print(b1.."Cost "..value["Cost"])
     --print(b1.."Cost "..math.floor(tonumber(value["Cost"]) * 0.5)) -- what I use to reduce price by half for traders
+    if (u9) then 
+        print(b1.."Conditions 1")
+        print(b1.."Condition_0_Type Item")
+        print(b1.."Condition_0_ID "..value["ID"])
+        print(b1.."Condition_0_Amount 1")
+    end
 end
