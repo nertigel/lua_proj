@@ -59,28 +59,25 @@ for key, value in pairs(v3) do
     local b1 = v0.."%d+_ID "
     local b2 = v0.."%d+_Cost "
     if (string.match(value, b1)) then
-        local b3 = string.gsub(value, b1, "")
-        if not (v4[ai]) then v4[ai] = {} end
-        v4[ai]["ID"] = b3
         local b4 = v3[key + 1]
         if (string.match(b4, b2)) then
-            local b5 = string.gsub(b4, b2, "")
-            v4[ai]["Cost"] = b5
+            v4[string.gsub(value, b1, "")] = string.gsub(b4, b2, "")
         end
-        
-        ai = ai + 1
     end
 end
-print("Buying "..#v4+1)
+local u8 = (function() local a = 0; for key, value in pairs(v4) do a = a + 1; end return a end)
+print("Buying "..u8(v4))
 for key, value in pairs(v4) do 
-    local b1 = v0..key.."_"
-    print(b1.."ID "..value["ID"])
-    print(b1.."Cost "..value["Cost"])
-    --print(b1.."Cost "..math.floor(tonumber(value["Cost"]) * 0.5)) -- what I use to reduce price by half for traders
+    local b1 = v0..ai.."_"
+    print(b1.."ID "..key)
+    print(b1.."Cost "..value)
+    --print(b1.."Cost "..math.floor(tonumber(value) * 0.5)) -- what I use to reduce price by half for traders
     if (u9) then 
         print(b1.."Conditions 1")
         print(b1.."Condition_0_Type Item")
-        print(b1.."Condition_0_ID "..value["ID"])
+        print(b1.."Condition_0_ID "..key)
         print(b1.."Condition_0_Amount 1")
     end
+
+    ai = ai + 1
 end
