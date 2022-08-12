@@ -65,7 +65,7 @@ for key, value in pairs(v3) do
         end
     end
 end
-local u8 = (function() local a = 0; for key, value in pairs(v4) do a = a + 1; end return a end)
+local u8 = (function(b) local a = 0; for key, value in pairs(b) do a = a + 1; end return a end)
 print("Buying "..u8(v4))
 for key, value in pairs(v4) do 
     local b1 = v0..ai.."_"
